@@ -19,7 +19,6 @@ html, body {
 }
 
 .hero {
-  display: block;
   width: 100%;
   height: 100vh;
 }
@@ -34,26 +33,51 @@ html, body {
   position: relative;
 }
 .bg {
-  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   --a:0deg;
   --c:white;
   background:conic-gradient(from var(--a), black, var(--c));
+  -webkit-animation-name: example;
   animation-name: example, example1;
+  -webkit-animation-duration: 4s;
   animation-duration: 4s;
   animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
   transition: --a .5s --c 1s;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
 }
 @keyframes example {
-  from  {--a:0deg;}
-  to {--a:360deg;}
+  from  {--a:0deg;
+  -webkit-transform: rotate(--a:0deg);}
+  to {--a:360deg;
+    -webkit-transform: rotate(--a:360deg);}
 }
 @property --a {
   syntax: '<angle>';
   inherits: false;
   initial-value: 0deg;
 }
+/* @keyframes example {
+  from  {-webkit-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  to {--a:360deg;}
+  }
+  
+  -webkit-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
+    to {
+      -webkit-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(360deg); } } */
 
 .title-hero {
   width: 100vh;
@@ -185,15 +209,6 @@ animation-iteration-count: infinite;
 transition: --a .5s --c 1s;
 -webkit-animation-timing-function: linear;
 animation-timing-function: linear;
-}
-@keyframes example {
-from  {--a:0deg;}
-to {--a:360deg;}
-}
-@property --a {
-syntax: '<angle>';
-inherits: false;
-initial-value: 0deg;
 }
 
 .title-hero {
