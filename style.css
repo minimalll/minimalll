@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+
+:root {
+  --shadow: rgba(0, 0, 0, 0.8)
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: max-content;
+  /* width: 100vw; */
+  /* overflow: hidden; */
+  font-family: "Montserrat", monospace;
+  font-size: 16px;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+.bg {
+  --a:0deg;
+  --c:white;
+  background:conic-gradient(from var(--a), black, var(--c));
+  animation-name: example, example1;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  transition: --a .5s --c 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+@keyframes example {
+  from  {--a:0deg;}
+  to {--a:360deg;}
+}
+@property --a {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.title-hero {
+  width: 100vh;
+  /* font-size: 4rem; */
+  font-weight: 700;
+  text-transform: lowercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5% 0 0 20px;
+  color: lightseagreen;
+  opacity: .3;
+}
+
+.socials {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5% 0 0 0;
+}
+.social {
+  text-decoration: none;
+  color: white;
+  margin: 20px;
+  /* animation: color 3.7s .3s infinite;
+  transition: all .5s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear; */
+}
+.social:hover {
+  color: lightseagreen;
+}
+.content {
+  /* width: 100%;
+  height: 50%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* text-align: center; */
+  /* font-size: 2rem;
+  font-weight: 300;
+  line-height: 3rem; */
+  /* color: white; */
+
+position: absolute;
+/* width: 676px;
+height: 183px; */
+bottom: 0;
+left: 0;
+padding: 0 0 5% 20px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 50px;
+line-height: 61px;
+
+color: #171717;
+}
+.content span {
+  font-weight: 800;
+  color: white;
+}
+
+.primary-btn {
+  padding: 20px 120px;
+  background-color: white;
+  border: 0px;
+  border-radius: 10px;
+  transition: all .4s;
+  margin: 60px 0;
+  font-family: "Montserrat", monospace;
+}
+.primary-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.about {
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+}
+.sq {
+  width: 400px;
+  height: 400px;  
+  background-color: black;
+  position: sticky;
+  top: 10px;
+}
+
+.sq:after {
+  /* This value is the OPPOSITE color of our background */
+  color: white; 
+  mix-blend-mode: difference;
+}
+
+@media screen and (max-width: 600px) {
+  #allrecords a {
+  color: white;
+}
+#allrecords a:hover {
+color: lightseagreen;
+transition: all .5s;
+}
+
+.hero {
+width: 100%;
+height: 100vh;
+}
+
+.container {
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+position: relative;
+}
+.bg {
+--a:0deg;
+--c:white;
+background:conic-gradient(from var(--a), black, var(--c));
+animation-name: example, example1;
+animation-duration: 4s;
+animation-iteration-count: infinite;
+transition: --a .5s --c 1s;
+-webkit-animation-timing-function: linear;
+animation-timing-function: linear;
+}
+@keyframes example {
+from  {--a:0deg;}
+to {--a:360deg;}
+}
+@property --a {
+syntax: '<angle>';
+inherits: false;
+initial-value: 0deg;
+}
+
+.title-hero {
+width: 100vh;
+/* font-size: 4rem; */
+font-weight: 700;
+text-transform: lowercase;
+position: absolute;
+top: 0;
+left: 0;
+padding: 5% 0 0 20px;
+color: lightseagreen;
+opacity: .3;
+}
+
+.socials {
+position: absolute;
+top: 0;
+right: 0;
+padding: 5% 20px 0 0;
+}
+.social {
+text-decoration: none;
+color: #fff;
+margin: 20px;
+/* animation: color 3.7s .3s infinite;
+transition: all .5s;
+-webkit-animation-timing-function: linear;
+animation-timing-function: linear; */
+}
+.social:hover {
+color: lightseagreen;
+}
+.content {
+/* width: 100%;
+height: 50%; */
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+/* text-align: center; */
+/* font-size: 2rem;
+font-weight: 300;
+line-height: 3rem; */
+/* color: white; */
+
+position: absolute;
+/* width: 676px;
+height: 183px; */
+bottom: 0;
+left: 0;
+padding: 0 0 5% 20px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 10px !important;
+line-height: 31px;
+
+color: #171717;
+}
+.content span {
+font-weight: 800;
+color: green;
+}
+}
